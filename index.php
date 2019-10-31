@@ -4,7 +4,7 @@ $to      = "Akhiltev@gmail.com";
 $subject = 'the subject';
 $message = 'hello';
 
-//mail($to, $subject, $message, $headers);
+mail($to, $subject, $message);
 ?> 
 
 
