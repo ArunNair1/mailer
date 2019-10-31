@@ -6,7 +6,7 @@ $message = 'hello';
 
 $returnvalue = mail($to, $subject, $message);
 
-if($returnvalue)
+if($returnvalue == true)
 {
 	echo "sent";
 }
