@@ -4,7 +4,16 @@ $to      = "arun.vin09@gmail.com";
 $subject = 'the subject';
 $message = 'hello';
 
-mail($to, $subject, $message);
+$returnvalue = mail($to, $subject, $message);
+
+if($returnvalue)
+{
+	echo "sent";
+}
+else
+{
+	echo "not semt";
+}
 ?> 
 
 
