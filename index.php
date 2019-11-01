@@ -5,15 +5,6 @@ $subject = 'the subject';
 $message = 'hello';
 
 $returnvalue = mail($to, $subject, $message);
-
-if($returnvalue == true)
-{
-	echo "sent";
-}
-else
-{
-	echo "not semt";
-}
 ?> 
 
 
