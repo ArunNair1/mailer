@@ -6,8 +6,8 @@ if(isset($_POST["email"]))
 	//try
 	//{
 	
-		require_once('classes/PHPMailer.php');
-		require_once('classes/SMTP.php');
+		require_once('./classes/PHPMailer.php');
+		require_once('./classes/SMTP.php');
 		
 		
 		$mail = new PHPMailer();
