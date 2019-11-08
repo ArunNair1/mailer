@@ -11,17 +11,18 @@ if(isset($_POST["email"]))
 		
 		
 		$mail = new PHPMailer();
-		$mail->SMTPDebug = SMTP::DEBUG_SERVER; 
 		
 		
-		
+		$mail->Mailer = 'smtp';
 		$mail->IsSMTP();
-		$mail->Host = 'smtp.gmail.com';
-		$mail->Port       = 26; 
+		$mail->Host = 'smtp.gmail.com'; 
+		$mail->Port       = 587; 
 		$mail->SMTPAuth = true;
 		$mail->Username = 'codelearnervin@gmail.com';
 		$mail->Password = '9818064641';
-		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+		$mail->SMTPSecure = 'ssl';
+		
+		$mail->From = "codelearnervin@gmail.com";
 		$mail->setFrom = 'codelearnervin@gmail.com';
 		$mail->FromName = 'codelearner';
 		$mail->AddAddress('arun.vin09@gmail.com','Name');
