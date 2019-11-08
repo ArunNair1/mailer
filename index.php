@@ -1,4 +1,9 @@
 <?php 
+if(isset($_POST["email"]))
+{
+	require 'class/PHPMailer.php';
+	$mail = new PHPMailer;
+}; 
 
 //$returnvalue = mail($to, $subject, $message);
 ?> 
