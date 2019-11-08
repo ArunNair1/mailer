@@ -3,7 +3,7 @@ if(isset($_POST["email"]))
 {
 	echo "test";
 	
-	/*
+	
 	require 'class/PHPMailer.php';
 	$mail = new PHPMailer;
 	$mail->IsSMTP();
@@ -19,7 +19,7 @@ if(isset($_POST["email"]))
 	$mail->IsHTML(true);
 	$mail->Subject='test';
 	$mail->body = 'test again';
-	
+	/*
 	if($mail->Send())
 	{ echo "snet"; }
 else{ echo "not sent";}
