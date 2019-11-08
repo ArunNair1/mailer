@@ -6,18 +6,18 @@ if(isset($_POST["email"]))
 	try
 	{
 	
-		require 'classes/PHPMailer.php';
-		require 'classes/SMTP.php';
+		require_once('classes/PHPMailer.php');
+		require_once('classes/SMTP.php');
 		
 		
-		$mail = new PHPMailer(true);
+		$mail = new PHPMailer();
 		$mail->SMTPDebug = SMTP::DEBUG_SERVER; 
 		
 		
 		
 		$mail->IsSMTP();
 		$mail->Host = 'smtp.gmail.com';
-		$mail->Port       = 587; 
+		$mail->Port       = 26; 
 		$mail->SMTPAuth = true;
 		$mail->Username = 'codelearnervin@gmail.com';
 		$mail->Password = '9818064641';
