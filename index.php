@@ -6,14 +6,10 @@ if(isset($_POST["email"]))
 	try
 	{
 	
-		//require 'class/PHPMailer.php';
-		//require 'class/SMTP.php';
+		require 'class/PHPMailer.php';
+		require 'class/SMTP.php';
 		
-		use classes\PHPMailer;
-		use classes\SMTP;
-		use classes\Exception;
-
-
+		
 		$mail = new PHPMailer(true);
 		$mail->SMTPDebug = SMTP::DEBUG_SERVER; 
 		
@@ -34,7 +30,7 @@ if(isset($_POST["email"]))
 		$mail->Body = 'test again';
 	
 		$mail->Send();
-		echo "snet";
+		echo "sent";
 	}
 	catch(Exception $e)
 	{
