@@ -35,6 +35,7 @@ if(isset($_POST["email"]))
 	catch(Exception $e)
 	{
 		echo ($mail->ErrorInfo);
+		echo $e->errorMessage();
 	}
 	
 	echo "process complte";
