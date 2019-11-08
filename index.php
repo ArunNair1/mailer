@@ -6,8 +6,8 @@ if(isset($_POST["email"]))
 	//try
 	//{
 	
-		require_once('./classes/PHPMailer.php');
-		require_once('./classes/SMTP.php');
+		use ('./classes/PHPMailer.php');
+		use ('./classes/SMTP.php');
 		
 		
 		$mail = new PHPMailer();
@@ -36,7 +36,7 @@ if(isset($_POST["email"]))
 			// echo "snt";
 		// }
 		*/
-		echo "not sent".$mail->ErrorInfo;
+		//echo "not sent".$mail->ErrorInfo;
 	}
 	// catch(Exception $e)
 	// {
