@@ -1,10 +1,11 @@
 <?php 
 if(isset($_POST["email"]))
 {
-	echo "test";
 	
-	
-	require 'class/PHPMailer.php';
+	echo "arun";
+	try
+	{
+		require 'class/PHPMailer.php';
 	$mail = new PHPMailer;
 	$mail->IsSMTP();
 	$mail->Host = 'smtpout.secureserver.net';
@@ -20,8 +21,6 @@ if(isset($_POST["email"]))
 	$mail->Subject='test';
 	$mail->body = 'test again';
 	
-	try
-	{
 		$mail->Send();
 		echo "snet";
 	}
