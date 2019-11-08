@@ -3,6 +3,25 @@ if(isset($_POST["email"]))
 {
 	require 'class/PHPMailer.php';
 	$mail = new PHPMailer;
+	$mail->IsSMTP();
+	$mail->Host = 'smtpout.secureserver.net';
+	$mail->Port = '80';
+	$mail->SMTPAuth = true;
+	$mail->Username = 'codelearnervin@gmail.com';
+	$mail->Password = '9818064641';
+	$mail->SMTPSecure = '';
+	$mail->From = 'codelearnervin@gmail.com';
+	$mail->FromName = 'codelearner';
+	$mail->AddAddress('arun.vin09@gmail.com','Name');
+	$mail->IsHTML(true);
+	$mail->Subject='test';
+	$mail->body = 'test again';
+	
+	if($mail->Send())
+	{ echo "snet"; }
+else{ echo "not sent";}
+	
+	
 }; 
 
 //$returnvalue = mail($to, $subject, $message);
