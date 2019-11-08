@@ -12,7 +12,7 @@ if(isset($_POST["email"]))
 		
 		$mail = new PHPMailer();
 		
-		
+		/*
 		$mail->Mailer = 'smtp';
 		$mail->IsSMTP();
 		$mail->Host = 'smtp.gmail.com'; 
@@ -35,6 +35,7 @@ if(isset($_POST["email"]))
 		// {
 			// echo "snt";
 		// }
+		*/
 		echo "not sent".$mail->ErrorInfo;
 	}
 	// catch(Exception $e)
