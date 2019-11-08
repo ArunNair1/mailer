@@ -31,10 +31,10 @@ if(isset($_POST["email"]))
 		$mail->Body = 'test again';
 		$mail->SMTPDebug = 2;
 	
-		if($mail->Send())
-		{
-			echo "snt";
-		}
+		// if($mail->Send())
+		// {
+			// echo "snt";
+		// }
 		echo "not sent".$mail->ErrorInfo;
 	}
 	// catch(Exception $e)
