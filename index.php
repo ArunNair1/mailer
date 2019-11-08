@@ -19,11 +19,18 @@ if(isset($_POST["email"]))
 	$mail->IsHTML(true);
 	$mail->Subject='test';
 	$mail->body = 'test again';
-	/*
-	if($mail->Send())
-	{ echo "snet"; }
-else{ echo "not sent";}
-	*/
+	
+	try
+	{
+		$mail->Send()
+		echo "snet";
+	}
+	catch(Exception $e)
+	{
+		print_r($mail->ErrorInfo);
+	}
+	
+	
 	
 }; 
 
