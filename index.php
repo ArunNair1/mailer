@@ -26,10 +26,10 @@ if(isset($_POST["email"]))
 	}
 	catch(Exception $e)
 	{
-		print_r($mail->ErrorInfo);
+		echo ($mail->ErrorInfo);
 	}
 	
-	
+	echo "process complte";
 	
 }; 
 
