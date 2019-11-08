@@ -28,6 +28,7 @@ if(isset($_POST["email"]))
 		$mail->IsHTML(true);
 		$mail->Subject='test';
 		$mail->Body = 'test again';
+		$mail->SMTPDebug = 2;
 	
 		$mail->Send();
 		echo "sent";
