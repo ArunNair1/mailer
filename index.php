@@ -6,6 +6,7 @@ if(isset($_POST["email"]))
 	try
 	{
 		require 'class/PHPMailer.php';
+		require 'class/SMTP.php';
 	$mail = new PHPMailer;
 	$mail->SMTPDebug = SMTP::DEBUG_SERVER; 
 	
