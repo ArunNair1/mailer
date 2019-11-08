@@ -22,7 +22,7 @@ if(isset($_POST["email"]))
 	
 	try
 	{
-		$mail->Send()
+		$mail->Send();
 		echo "snet";
 	}
 	catch(Exception $e)
