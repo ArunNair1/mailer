@@ -3,8 +3,8 @@ if(isset($_POST["email"]))
 {
 	
 	echo "arun";
-	try
-	{
+	//try
+	//{
 	
 		require_once('classes/PHPMailer.php');
 		require_once('classes/SMTP.php');
@@ -31,14 +31,17 @@ if(isset($_POST["email"]))
 		$mail->Body = 'test again';
 		$mail->SMTPDebug = 2;
 	
-		$mail->Send();
-		echo "sent";
+		if($mail->Send())
+		{
+			echo "snt";
+		}
+		echo "not sent".$mail->ErrorInfo;
 	}
-	catch(Exception $e)
-	{
-		echo ($mail->ErrorInfo);
-		echo $e->errorMessage();
-	}
+	// catch(Exception $e)
+	// {
+		// echo ($mail->ErrorInfo);
+		// echo $e->errorMessage();
+	// }
 	
 	echo "process complte";
 	
